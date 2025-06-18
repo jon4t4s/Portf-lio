@@ -437,8 +437,8 @@
                 <div class="col-lg-6">
                     <form id="contactForm" novalidate>
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="name" placeholder="Nome" required"" >
-                            <div class="invalid-feedback">Por favor, insira seu nome.</div>
+                            <input type="text" class="form-control" id="name" placeholder="Nome" required pattern=".*\S+.*" oninput="this.value = this.value.replace(/[^A-Za-zÀ-ÿ\s]/g, '')" title="O nome deve conter apenas letras e não pode estar em branco.">
+                            <div class="invalid-feedback">Por favor, insira um nome válido </div>
                         </div>
                         <div class="mb-3">
                             <input type="email" class="form-control" id="email" placeholder="E-mail" required>
